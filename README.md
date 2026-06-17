@@ -2,17 +2,39 @@
 
 This is a demo repository for the creation of a homebrew Formula and Tap.
 
-## Quick start
+## How do I install these formulae?
 
-Add the repo with:
+In the shell:
+```sh
+brew install alexgravx/<tap>/<formula>                  # Direct
 ```
-brew tap alexgravx/gravlax-perso
+
+```sh
+brew tap alexgravx/<tap>                                # Indirect
+brew install <formula>
 ```
-Install the formula with:
+
+Or, in a `brew bundle` ~ `Brewfile`:
+
+```ruby
+tap "alexgravx/test"
+brew "<formula>"
 ```
-brew install gravlax-perso
+
+Here, we can run the command like this:
+
+```sh
+brew install alexgravx/gravlax-perso/gravlax-perso      # install
+gravlax-perso                                           # run
 ```
-Last, you can run the command with:
-```
-gravlax-perso
-```
+
+## Create a new tap and formula
+
+Use: `brew tap-new $YOUR_GITHUB_USERNAME/<homebrew-tap-name>`
+
+## Documentation
+
+`brew help`, `man brew` or check [Homebrew's documentation](https://idocs.brew.sh).
+
+Also see [Create tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
+and [Tap with github workflow](https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/)
